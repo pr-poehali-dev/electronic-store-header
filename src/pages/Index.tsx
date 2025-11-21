@@ -39,6 +39,48 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="bg-muted border-b">
+        <div className="max-w-[1600px] mx-auto px-6 py-2">
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <nav className="flex items-center gap-1 text-sm overflow-x-auto">
+              <a href="#info" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Общая информация</a>
+              <a href="#requisites" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Реквизиты</a>
+              <a href="#registration" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Регистрация</a>
+              <a href="#contacts" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Контакты</a>
+              <a href="#activities" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap flex items-center gap-1">
+                Виды деятельности
+                <Badge variant="secondary" className="text-xs px-1.5 py-0">9</Badge>
+              </a>
+              <a href="#connections" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Связи</a>
+              <a href="#purchases" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Госзакупки</a>
+              <a href="#inspections" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap">Проверки и КНМ</a>
+              <a href="#history" className="px-3 py-1.5 hover:bg-background rounded transition-colors whitespace-nowrap flex items-center gap-1">
+                История изменений
+                <Badge variant="secondary" className="text-xs px-1.5 py-0">5</Badge>
+              </a>
+            </nav>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" className="text-xs">
+                <Icon name="FileText" size={14} className="mr-1" />
+                Выписка ЕГРИП
+              </Button>
+              <Button variant="outline" size="sm" className="text-xs">
+                <Icon name="FileDown" size={14} className="mr-1" />
+                PDF
+              </Button>
+              <Button variant="outline" size="sm" className="text-xs">
+                <Icon name="FileSpreadsheet" size={14} className="mr-1" />
+                Excel
+              </Button>
+              <Button variant="outline" size="sm" className="text-xs">
+                <Icon name="Share2" size={14} className="mr-1" />
+                Поделиться
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <header className="bg-secondary border-b sticky top-0 z-50 shadow-sm">
         <div className="w-full px-6 py-6">
           <div className="max-w-[1600px] mx-auto">
