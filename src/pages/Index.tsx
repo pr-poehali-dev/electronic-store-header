@@ -138,34 +138,45 @@ const Index = () => {
 
       <footer className="bg-secondary border-t mt-16">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Zap" className="text-primary" size={28} />
+                <div className="bg-primary text-primary-foreground p-2 rounded-lg">
+                  <Icon name="Zap" size={28} />
+                </div>
                 <h3 className="text-xl font-bold">TechMart</h3>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground mb-4">
                 Интернет-магазин электроники с лучшими ценами и сервисом
               </p>
+              <div className="space-y-1 text-xs text-muted-foreground">
+                <p className="font-semibold">ООО "ТехМарт"</p>
+                <p>ИНН: 7701234567</p>
+                <p>ОГРН: 1157746123456</p>
+                <p>КПП: 770101001</p>
+              </div>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Каталог</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Смартфоны</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Ноутбуки</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Аксессуары</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">ТВ и аудио</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Информация</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">О компании</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Доставка</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Гарантия</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a></li>
+              <h4 className="font-semibold mb-4 flex items-center gap-2">
+                <Icon name="Store" size={18} className="text-primary" />
+                Склад-магазин
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <Icon name="MapPin" size={16} className="mt-0.5 flex-shrink-0" />
+                  <span>г. Москва, ул. Складская, д. 15, стр. 2</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Clock" size={16} className="flex-shrink-0" />
+                  <span>Пн-Пт: 9:00 - 20:00<br />Сб-Вс: 10:00 - 18:00</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} className="flex-shrink-0" />
+                  <a href="tel:+74951234567" className="hover:text-primary transition-colors">
+                    +7 (495) 123-45-67
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -173,24 +184,48 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-2 text-muted-foreground">
-                  <Icon name="Phone" size={16} />
-                  <a href="tel:+78001234567" className="hover:text-primary transition-colors">8 (800) 123-45-67</a>
+                  <Icon name="Phone" size={16} className="flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-foreground">Горячая линия</p>
+                    <a href="tel:+78001234567" className="hover:text-primary transition-colors">
+                      8 (800) 123-45-67
+                    </a>
+                  </div>
                 </li>
                 <li className="flex items-center gap-2 text-muted-foreground">
-                  <Icon name="Mail" size={16} />
-                  <a href="mailto:info@techmart.ru" className="hover:text-primary transition-colors">info@techmart.ru</a>
+                  <Icon name="Mail" size={16} className="flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-foreground">Email</p>
+                    <a href="mailto:info@techmart.ru" className="hover:text-primary transition-colors">
+                      info@techmart.ru
+                    </a>
+                  </div>
                 </li>
                 <li className="flex items-center gap-2 text-muted-foreground">
-                  <Icon name="MapPin" size={16} />
-                  <span>Москва, ул. Примерная, 1</span>
+                  <Icon name="Building2" size={16} className="flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-foreground">Офис</p>
+                    <span>Москва, ул. Примерная, 1</span>
+                  </div>
                 </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Информация</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">О компании</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Доставка и оплата</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Гарантия и возврат</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Публичная оферта</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Политика конфиденциальности</a></li>
               </ul>
             </div>
           </div>
 
           <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © 2025 TechMart. Все права защищены.
+            <p className="text-sm text-muted-foreground text-center md:text-left">
+              © 2025 ООО "ТехМарт". Все права защищены.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -201,6 +236,9 @@ const Index = () => {
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Icon name="Twitter" size={20} />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Icon name="Youtube" size={20} />
               </a>
             </div>
           </div>
