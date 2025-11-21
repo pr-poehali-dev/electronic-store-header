@@ -85,11 +85,30 @@ const Index = () => {
         <div className="w-full px-6 py-6">
           <div className="max-w-[1600px] mx-auto">
             <div className="flex items-center justify-between gap-6 mb-6">
-              <div className="flex items-center gap-3">
-                <div className="bg-primary text-primary-foreground p-2.5 rounded-lg">
-                  <Icon name="Zap" size={36} />
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary text-primary-foreground p-2.5 rounded-lg">
+                    <Icon name="Zap" size={36} />
+                  </div>
+                  <h1 className="text-3xl font-bold text-primary">TechMart</h1>
                 </div>
-                <h1 className="text-3xl font-bold text-primary">TechMart</h1>
+                
+                <div className="hidden xl:flex items-center gap-6 pl-6 border-l">
+                  <a href="tel:+78001234567" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+                    <Icon name="Phone" size={20} />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold">8 (800) 123-45-67</span>
+                      <span className="text-xs text-muted-foreground">Бесплатно по РФ</span>
+                    </div>
+                  </a>
+                  <a href="mailto:info@techmart.ru" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+                    <Icon name="Mail" size={20} />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold">info@techmart.ru</span>
+                      <span className="text-xs text-muted-foreground">Поддержка 24/7</span>
+                    </div>
+                  </a>
+                </div>
               </div>
               
               <div className="hidden lg:flex items-center gap-8">
