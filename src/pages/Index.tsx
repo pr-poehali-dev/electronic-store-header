@@ -40,38 +40,42 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-secondary border-b sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <Icon name="Zap" className="text-primary" size={32} />
-              <h1 className="text-2xl font-bold text-primary">TechMart</h1>
+        <div className="w-full px-6 py-6">
+          <div className="max-w-[1600px] mx-auto">
+            <div className="flex items-center justify-between gap-6 mb-6">
+              <div className="flex items-center gap-3">
+                <div className="bg-primary text-primary-foreground p-2.5 rounded-lg">
+                  <Icon name="Zap" size={36} />
+                </div>
+                <h1 className="text-3xl font-bold text-primary">TechMart</h1>
+              </div>
+              
+              <div className="hidden lg:flex items-center gap-8">
+                <a href="#" className="text-foreground hover:text-primary transition-colors flex items-center gap-2 text-base">
+                  <Icon name="Heart" size={22} />
+                  <span>Избранное</span>
+                </a>
+                <a href="#" className="text-foreground hover:text-primary transition-colors flex items-center gap-2 text-base">
+                  <Icon name="ShoppingCart" size={22} />
+                  <span>Корзина</span>
+                </a>
+                <a href="#" className="text-foreground hover:text-primary transition-colors flex items-center gap-2 text-base">
+                  <Icon name="User" size={22} />
+                  <span>Профиль</span>
+                </a>
+              </div>
             </div>
-            
-            <div className="hidden md:flex items-center gap-6">
-              <a href="#" className="text-foreground hover:text-primary transition-colors flex items-center gap-1">
-                <Icon name="Heart" size={20} />
-                <span>Избранное</span>
-              </a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors flex items-center gap-1">
-                <Icon name="ShoppingCart" size={20} />
-                <span>Корзина</span>
-              </a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors flex items-center gap-1">
-                <Icon name="User" size={20} />
-                <span>Профиль</span>
-              </a>
-            </div>
-          </div>
 
-          <div className="relative max-w-2xl mx-auto">
-            <Icon name="Search" className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
-            <Input
-              type="search"
-              placeholder="Поиск товаров..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 bg-background"
-            />
+            <div className="relative max-w-4xl mx-auto">
+              <Icon name="Search" className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={22} />
+              <Input
+                type="search"
+                placeholder="Поиск товаров..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-12 bg-background h-12 text-base"
+              />
+            </div>
           </div>
         </div>
       </header>
